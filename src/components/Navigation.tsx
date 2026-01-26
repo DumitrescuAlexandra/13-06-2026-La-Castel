@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, Toolbar } from "@mui/material";
+import { AppBar, Button, Toolbar } from "@mui/material";
 import React from "react";
 import { useEffect, useState } from "react";
 
@@ -37,6 +37,7 @@ export default function Navbar() {
         });
 
         if (bestEntry) {
+          // @ts-ignore
           const id = bestEntry.target.getAttribute("data-section");
           if (id) setActive(id);
         }
