@@ -168,19 +168,17 @@ import { Box, useMediaQuery, useTheme } from "@mui/material";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import Snowfall from "react-snowfall";
 
-function About() {
+type HeroProps = {
+  onScrollToAbout?: () => void;
+};
+
+function About({ onScrollToAbout }: HeroProps) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
-  const scrollToNext = () => {
-    document.getElementById("details")?.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-
   return (
     <Box
-      id="about"
+      id="hero"
       sx={{
         position: "relative",
         width: "100%",
@@ -274,13 +272,13 @@ function About() {
             px: 2,
           }}
         >
-          13 Iunie 2026 | La Castel | Brașov
+          13 Iunie 2026 | La Castel | Brasov
         </Box>
       </Box>
 
       {/* Scroll indicator */}
       <Box
-        onClick={scrollToNext}
+        onClick={onScrollToAbout}
         sx={{
           position: "absolute",
           bottom: { xs: "20px", md: "32px" },

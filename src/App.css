@@ -14,3 +14,31 @@ body,
   width: 100%;
   height: 100%;
 }
+
+.paper-background {
+  background-image: url("https://i.postimg.cc/8sgkkby2/Paper-4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.paper-background-rotated {
+  position: relative; /* required for ::before */
+  overflow: hidden; /* prevent margin collapse gaps */
+}
+
+.paper-background-rotated::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* full height */
+  background-image: url("https://i.postimg.cc/8sgkkby2/Paper-4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+  z-index: 0;
+  pointer-events: none;
+}

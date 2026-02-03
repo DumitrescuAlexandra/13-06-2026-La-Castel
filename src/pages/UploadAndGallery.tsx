@@ -20,7 +20,6 @@ function UploadAndGallery() {
           zIndex: 1,
         }}
       />
-      <Navbar />
     </Box>
   );
 }
