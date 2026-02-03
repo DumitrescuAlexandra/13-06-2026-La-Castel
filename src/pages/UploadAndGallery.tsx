@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-import Navbar from "../components/Navigation";
 
 function UploadAndGallery() {
   return (

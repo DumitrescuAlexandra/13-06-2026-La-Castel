@@ -9,7 +9,7 @@ export function AboutEvent() {
           className="text-5xl md:text-6xl font-serif mb-8"
           style={{ color: "#D4AF37" }}
         >
-          About Our Special Day
+          Detalii despre eveniment
         </h2>
         <div className="space-y-6 text-gray-700 text-lg md:text-xl leading-relaxed">
           <p>
